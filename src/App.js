@@ -29,10 +29,36 @@ function App() {
   // let arr = [10,20,30,40,50];
   // arr.map((a,i) => console.log(a));
   
-  let intro = () => {
-    console.log("paneliya krinali");
-  }
-  intro();
+  // let intro = () => {
+  //   console.log("paneliya krinali");
+  // }
+  // intro();
+
+
+// 1 is Array()
+  // let arr = [1, 2, 3, 4, 5];
+  // arr.map((number,i)=>console.log(number));
+
+
+  // const numbers = [1, 2, 3, 4, 5];
+  // const doubled = numbers.map((number) => number * 2);
+  // console.log(doubled);
+
+//2.concat()
+//   const array1 = ['a', 'b', 'c'];
+//   const array2 = ['d', 'e', 'f'];
+//   const array3 = array1.concat(array2);
+
+// console.log(array3);
+// expected output: Array ["a", "b", "c", "d", "e", "f"]
+
+
+//3.to string()
+// const number = 1212
+// const numberString = number.toString();
+// console.log(number);
+
+
 
   return (
     <div className="App">

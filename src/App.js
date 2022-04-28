@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function App() { 
           //  let arr=[10,20,30,40,50];
           // //  console.log(arr[4]);
           //  let obj={

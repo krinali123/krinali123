@@ -77,7 +77,7 @@ console.log(filterdata);
              <td>{ value.name}</td>
              <td>{ value.price}</td>
              <td>{ value.quantity}</td>
-             
+             filterdata
            </tr>
          )
        })

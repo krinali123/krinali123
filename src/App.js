@@ -67,7 +67,7 @@ console.log(filterdata);
        <td>quantity</td>
        </th>
        <th>
-       <td>total cast</td>
+       <td>Total Cost</td>
      </th>
      {
        filterdata.map((value,index) => {

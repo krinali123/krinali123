@@ -48,7 +48,7 @@ function App() {
    //filter//
    const words = [35,25,23,29,33];
 
-    const result = words.filter(word => word <26);
+    const result = words.filter(word => word <26);``
 
    console.log(result);
     //reduse//

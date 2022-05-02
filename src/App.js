@@ -70,14 +70,14 @@ console.log(filterdata);
        <td>total cast</td>
      </th>
      {
-       data.map((value,index) => {
+       filterdata.map((value,index) => {
          return(
            <tr>
              <td>{ value.id}</td>
              <td>{ value.name}</td>
              <td>{ value.price}</td>
              <td>{ value.quantity}</td>
-             <td>{ value.total}</td>
+             
            </tr>
          )
        })

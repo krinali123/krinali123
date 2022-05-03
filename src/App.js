@@ -57,7 +57,7 @@ var meta =data
  
   return (
     <>
-   <table>
+   <table border="1">
         <th>
           <td>id</td>
        </th>
@@ -70,6 +70,7 @@ var meta =data
        <th>
            <td>quantity</td>
        </th>
+     
      <th>
        <td>Total Cost</td>
      </th>
@@ -81,7 +82,8 @@ var meta =data
              <td>{value.name}</td>
              <td>{value.price}</td>
              <td>{value.quantity}</td>
-             <td>{meta}</td>
+             {/* <td>{meta}</td> */}
+            {index === 0? <td rowspan={data.length}>{ans}</td>:null}
              
            </tr>
          )

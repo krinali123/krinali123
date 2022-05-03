@@ -57,7 +57,7 @@ var meta =data
  
   return (
     <>
-   <table border="1">
+   <table border="2">
         <th>
           <td>id</td>
        </th>

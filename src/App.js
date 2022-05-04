@@ -47,6 +47,7 @@ let data  =
 //  console.log(ans);
 let abc =data 
  .filter((data,index) => data.salary>=35000)
+ .filter((data,index) => data.status>=true)
  .reduce((acc,data,index) => acc+data.bonus,0);
  console.log(abc);
 

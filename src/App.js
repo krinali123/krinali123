@@ -40,16 +40,18 @@ let data  =
     status: true
   },
 ]
-//  data.map((value,index) => console.log(value.name,value.age,value.salary,value.bonus));
-//  let filterdata =data.filter((data,index) => data.expiry>=2022);
-//  console.log(filterdata);
-  // let ans= filterdata.reduce((acc,data,index) => acc+data.price,0);
-//  console.log(ans);
 let abc =data 
  .filter((data,index) => data.salary>=35000)
- .filter((data,index) => data.status>=true)
+ 
  .reduce((acc,data,index) => acc+data.bonus,0);
+ 
  console.log(abc);
+
+ let acs =data 
+  .filter((data,index) => data.salary+data.bonus)
+  .reduce((acc,data,index) => acc+data.salary+data.bonus,0);
+
+console.log(acs);
 
 return (
       <>
@@ -71,8 +73,9 @@ return (
          <td>salary+ bonus</td>
        </th>
        <th>
-         <td>status</td>
-       </th>
+             <td> total</td>
+         </th>
+       
        {
          data.map((value,index) => {
            return(
@@ -82,9 +85,9 @@ return (
                <td>{value.salary}</td>
                <td>{value.bonus}</td>
                <td>{value.salary+value.bonus}</td>
-               <td>{value.status}</td>
+              
                {/* <td>{meta}</td> */}
-              {/* {index === 0? <td rowspan={data.length}>{ans}</td>:null} */}
+               {index === 0? <td rowspan={data.length}>{acs}</td>:null} 
                
              </tr>
            )
@@ -94,54 +97,6 @@ return (
   </>
 );
 }
-// // //  data.map((value,index) => console.log(value.id,value.name));
-// //  let filterdata =data.filter((data,index) => data.expiry>=2022);
-// // //  console.log(filterdata);
-// //   let ans= filterdata.reduce((acc,data,index) => acc+data.price,0);
-// // //  console.log(ans);
-// // var meta =data 
-// //  .filter((data,index) => data.expiry>=2022)
-// //  .reduce((acc,data,index) => acc+data.price,0);
-
-//   return (
-//     <>
-//    <table border="2">
-//         <th>
-//           <td>id</td>
-//        </th>
-//        <th >
-//           <td>name</td>
-//        </th>
-//        <th>
-//           <td>price</td>
-//        </th>
-//        <th>
-//            <td>quantity</td>
-//        </th>
-     
-//      <th>
-//        <td>Total Cost</td>
-//      </th>
-//      {
-//        filterdata.map((value,index) => {
-//          return(
-//            <tr>
-//              <td>{value.id}</td>
-//              <td>{value.name}</td>
-//              <td>{value.price}</td>
-//              <td>{value.quantity}</td>
-//              {/* <td>{meta}</td> */}
-//             {index === 0? <td rowspan={data.length}>{ans}</td>:null}
-             
-//            </tr>
-//          )
-//        })
-//      }
-//    </table>
-//     </>
-//   );
-// }
-
 export default App;
 
 

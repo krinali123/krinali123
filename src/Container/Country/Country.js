@@ -7,7 +7,6 @@ constructor(props) {
         Country:'surat'
     };
 }
-
 Changecountry=()=>{
     this.setState({
      Country:'delhi'

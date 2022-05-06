@@ -40,54 +40,57 @@ let data  =
     status: true
   },
 ]
-let abc =data 
- .filter((data,index) => data.salary>=35000)
+// let xyz =data 
+//  .filter((data,index) => data.salary>=35000)
  
- .reduce((acc,data,index) => acc+data.bonus,0);
+//  .reduce((acc,data,index) => acc+data.bonus,0);
  
- console.log(abc);
+//  console.log(xyz);
+let filterdata = data.filter((data,index) => (data.status === true));
+ let abc = filterdata.reduce((acc,data)=> acc+data.salary+data.bonus,0)
+//   .filter((data,index) => data.salary+data.bonus)
+//   .reduce((acc,data,index) => acc+data.salary+data.bonus,0);
 
- let acs =data 
-  .filter((data,index) => data.salary+data.bonus)
-  .reduce((acc,data,index) => acc+data.salary+data.bonus,0);
-
-console.log(acs);
+// console.log(abc);
 
 return (
       <>
      <table border="2">
-          <th>
-            <td>name</td>
-         </th>
-         <th >
-            <td>age</td>
+          <tr>
+            <th>name</th>
+        
+         <th>
+            age
          </th>
          <th>
-            <td>salary</td>
+           salary
          </th>
          <th>
-             <td> bonus</td>
+             bonus
          </th>
-       
+         <th>
+             status
+         </th>
        <th>
-         <td>salary+ bonus</td>
+        salary+ bonus
        </th>
        <th>
-             <td> total</td>
+          total
          </th>
-       
+       </tr>
        {
-         data.map((value,index) => {
+         filterdata.map((value,index) => {
            return(
              <tr>
                <td>{value.name}</td>
                <td>{value.age}</td>
                <td>{value.salary}</td>
                <td>{value.bonus}</td>
+              
+               <td>{value.status.toString()}</td>
                <td>{value.salary+value.bonus}</td>
               
-               {/* <td>{meta}</td> */}
-               {index === 0? <td rowspan={data.length}>{acs}</td>:null} 
+               {index === 0? <td rowspan={data.length}>{abc}</td>:null} 
                
              </tr>
            )

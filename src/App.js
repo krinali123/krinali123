@@ -40,25 +40,16 @@ let data  =
     status: true
   },
 ]
-// let xyz =data 
-//  .filter((data,index) => data.salary>=35000)
- 
-//  .reduce((acc,data,index) => acc+data.bonus,0);
- 
-//  console.log(xyz);
+
 let filterdata = data.filter((data,index) => (data.status === true));
  let abc = filterdata.reduce((acc,data)=> acc+data.salary+data.bonus,0)
-//   .filter((data,index) => data.salary+data.bonus)
-//   .reduce((acc,data,index) => acc+data.salary+data.bonus,0);
 
-// console.log(abc);
 
 return (
       <>
      <table border="2">
           <tr>
             <th>name</th>
-        
          <th>
             age
          </th>
@@ -71,10 +62,10 @@ return (
          <th>
              status
          </th>
-       <th>
+         <th>
         salary+ bonus
-       </th>
-       <th>
+        </th>
+        <th>
           total
          </th>
        </tr>
@@ -86,10 +77,8 @@ return (
                <td>{value.age}</td>
                <td>{value.salary}</td>
                <td>{value.bonus}</td>
-              
                <td>{value.status.toString()}</td>
                <td>{value.salary+value.bonus}</td>
-              
                {index === 0? <td rowspan={data.length}>{abc}</td>:null} 
                
              </tr>

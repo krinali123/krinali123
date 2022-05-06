@@ -18,6 +18,7 @@ Changecountry=()=>{
         return (
             <>
             <div>Country:{this.state.Country}</div>
+            <p>GDP:{this.props. gdpval}</p>
             <button onClick={() => this.Changecountry()}> change</button>
             </> 
             

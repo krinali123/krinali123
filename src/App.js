@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Country from './Container/Country/Country';
 import City from './Container/Country/City';
@@ -9,10 +9,10 @@ function App() {
 
 return (
       <>
-      <Country/>
+      <Country gdpval={5.5}/>
       <City/>
       <Countryfun/>
-      <Cityfun/>
+      <Cityfun gdpval={4.5} />
     </>
 );
 }

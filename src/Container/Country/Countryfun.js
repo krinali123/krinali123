@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 function Countryfun(props) {
     const [Country,setCountry]=useState('india')
-    const [gdp,setgdp]=useState('0')
+    const [gdp,setgdp]=useState(0)
 
         const ChangeCountry=()=>{
         setCountry('mumbai')

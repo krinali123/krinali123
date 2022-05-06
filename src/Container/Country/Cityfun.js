@@ -1,24 +1,23 @@
-import React, { Component } from 'react';
-import City from './City';
+import React, { useState } from 'react';
 
-class Cityfun extends Component {
+function Cityfun({gdpval}) {
+    const [Cityfun,setCityfun]=useState('india')
+    const [gdp,setgdp]=useState(0)
 
-    const [City,setCity]=useState('mubai')
-    const [gdp,setgdp]=useState('0')
-
-        const ChangeCity=()=>{
-        setCity('mumbai')
-        }
-    render() {
-        return (
-            <div>
-                <p>City:{City}</p>
-            <button onClick={() => ChangeCity()}>change </button>
-            <p>gdp:{gdp}</p>
-            <button onClick={() => setgdp(5.5)}>change gdp</button>
-            </div>
-        );
+        const ChangeCityfun=()=>{
+        setCityfun('mumbai')
+        
     }
+    return (
+        <div>
+            <>
+            <p> Cityfun:{ Cityfun}</p>
+            <button onClick={() => ChangeCityfun()}>change </button>
+            <p>gdp:{gdp}</p>
+            <button onClick={() => setgdp(gdpval)}>change gdp</button>
+            </>
+        </div>
+    );
 }
 
 export default Cityfun;

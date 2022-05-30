@@ -21,7 +21,6 @@ function App() {
       <Route exact path={"/contact"}component={Contact}/>
       <Route exact path={"/danger"}component={Auth}/>
 
-
     </Switch>
     <Footer/>
     
